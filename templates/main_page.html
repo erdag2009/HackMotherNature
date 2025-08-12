@@ -7,7 +7,13 @@
   <meta name="description" content="Global student challenge with in-person, hybrid, and asynchronous events. Now expanding chapters in the United States, Türkiye, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="/Adsız tasarım (1).png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init('WxggkAx_avkYXx1Ev'); })();
+  </script>
   <style>
     :root{
       --bg:#ffffff; --bg-2:#fbfbfb; --text:#171717; --muted:#5f6368; --border:#e7e7e9;
@@ -67,10 +73,11 @@
 
     .input{width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border)}
 
-    .toast{position:fixed; right:16px; bottom:16px; background:#111; color:#fff; padding:12px 14px; border-radius:12px; opacity:0; transform:translateY(10px); transition:.25s ease; z-index:60}
+    /* Toast sits above the to-top button */
+    .toast{position:fixed; right:16px; bottom:72px; background:#111; color:#fff; padding:12px 14px; border-radius:12px; opacity:0; transform:translateY(10px); transition:.25s ease; z-index:60}
     .toast.show{opacity:1; transform:translateY(0)}
 
-    .to-top{position:fixed; right:16px; bottom:16px; width:42px; height:42px; border-radius:999px; background:linear-gradient(180deg,var(--green2),var(--green)); color:#fff; border:none; box-shadow:var(--shadow); display:none; align-items:center; justify-content:center}
+    .to-top{position:fixed; right:16px; bottom:16px; width:42px; height:42px; border-radius:999px; background:linear-gradient(180deg,var(--green2),var(--green)); color:#fff; border:none; box-shadow:var(--shadow); display:none; align-items:center; justify-content:center; cursor:pointer}
 
     .reveal{opacity:0; transform:translateY(12px); transition:opacity .45s ease, transform .45s ease}
     .reveal.visible{opacity:1; transform:translateY(0)}
@@ -80,7 +87,7 @@
   <header>
     <div class="container nav-inner">
       <a class="brand" href="#">
-        <img src="/static/Adsız tasarım (1).png" alt="HackMotherNature logo">
+        <img src="/Adsız tasarım (1).png" alt="HackMotherNature logo">
         <span class="brand-text"><span style="color:var(--maroon)">Hack</span><span style="color:var(--green)">MotherNature</span></span>
       </a>
       <nav id="desktopNav" aria-label="Primary">
@@ -97,7 +104,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
@@ -110,7 +116,7 @@
       </div>
       <div class="reveal">
         <div class="hero-card" style="text-align:center">
-          <img src="/static/Adsız tasarım (1).png" alt="HackMotherNature logo" style="max-width:220px; width:80%; height:auto" />
+          <img src="/Adsız tasarım (1).png" alt="HackMotherNature logo" style="max-width:220px; width:80%; height:auto" />
           <ul style="margin-top:18px; color:#40464d; line-height:1.7; text-align:left; display:inline-block">
             <li>Join diverse teams representing different continents</li>
             <li>Tackle three urgent scenarios using research, teamwork, and creativity</li>
@@ -122,15 +128,14 @@
     </div>
   </section>
 
-  <!-- ABOUT (first) -->
   <section id="about">
     <div class="container grid grid-2">
       <div class="reveal">
         <h2>Why this challenge?</h2>
         <p class="muted">We combine modern problem-solving with ecological thinking to solve global problems. Teams respond to regional prompts spanning climate, energy, food systems, water, and equity.</p>
         <div class="grid grid-2" style="margin-top:18px">
-          <div class="card"><strong style="color:var(--maroon)">Interdisciplinary by design:</strong> open to every background—no prior experience required.</div>
-          <div class="card"><strong style="color:var(--maroon)">Asynchronous & inclusive:</strong> work on your schedule; meet live to kick off and celebrate.</div>
+          <div class="card"><strong style="color:var(--maroon)">Interdisciplinary by Design:</strong> Open to every background. No prior experience required!</div>
+          <div class="card"><strong style="color:var(--maroon)">Asynchronous & Inclusive:</strong> Work on your schedule. Meet live to kick off and celebrate!</div>
         </div>
       </div>
       <div class="reveal">
@@ -146,24 +151,23 @@
     </div>
   </section>
 
-  <!-- CHAPTERS (second) -->
   <section id="chapters">
     <div class="container">
       <h2 class="reveal">Global Chapters</h2>
       <p class="muted reveal">Join or start a chapter to run meetups, mini-hacks, and hybrid events at your school.</p>
       <div class="grid grid-3" style="margin-top:18px">
         <div class="card reveal">
-          <h3>United States 🇺🇸</h3>
+          <h3>United States</h3>
           <p class="muted">Launching school clubs and weekend sprints in select cities.</p>
           <div class="muted" style="font-size:.9rem">Formats: In-person • Hybrid • Async</div>
         </div>
         <div class="card reveal">
-          <h3>Türkiye 🇹🇷</h3>
+          <h3>Türkiye</h3>
           <p class="muted">Student-led chapter network with bilingual resources.</p>
           <div class="muted" style="font-size:.9rem">Formats: In-person • Hybrid • Async</div>
         </div>
         <div class="card reveal">
-          <h3>Your Country 🌍</h3>
+          <h3>Your Country</h3>
           <p class="muted">Interested in starting a chapter? We’ll provide the playbook and mentor support.</p>
           <a class="btn btn-ghost" href="#contact">Start a chapter</a>
         </div>
@@ -171,7 +175,6 @@
     </div>
   </section>
 
-  <!-- EVENTS -->
   <section id="events">
     <div class="container">
       <h2 class="reveal">Upcoming Events</h2>
@@ -199,19 +202,17 @@
     </div>
   </section>
 
-  <!-- CHALLENGE -->
   <section id="challenge">
     <div class="container">
       <h2 class="reveal">What you will do</h2>
       <div class="grid grid-3" style="margin-top:18px">
         <div class="card reveal"><h3>Research & Frame</h3><p class="muted">Scope your region and scenario, gather data, and define constraints.</p></div>
-        <div class="card reveal"><h3>Design & Prototype</h3><p class="muted">Co-create practical, ethical interventions or tools—no lab coat required.</p></div>
-        <div class="card reveal"><h3>Tell the Story</h3><p class="muted">Package the solution for judges and peers: brief, visuals, rationale.</p></div>
+        <div class="card reveal"><h3>Design & Prototype</h3><p class="muted">Create practical ideas or tools. No lab coat required!</p></div>
+        <div class="card reveal"><h3>Tell the Story</h3><p class="muted">Pitch your ideas to the judges and peers</p></div>
       </div>
     </div>
   </section>
 
-  <!-- SCHEDULE -->
   <section id="schedule">
     <div class="container">
       <h2 class="reveal">Three-Day Flow (Hybrid-friendly)</h2>
@@ -232,7 +233,6 @@
     </div>
   </section>
 
-  <!-- FAQS -->
   <section id="faqs">
     <div class="container">
       <h2 class="reveal">FAQs</h2>
@@ -244,7 +244,6 @@
     </div>
   </section>
 
-  <!-- REGISTER -->
   <section id="register">
     <div class="container">
       <div class="card" style="text-align:center">
@@ -259,7 +258,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="container grid grid-2">
       <div class="reveal">
@@ -274,15 +272,15 @@
         <form class="grid" id="contactForm" style="gap:12px">
           <div>
             <label class="muted" for="cname">Name</label>
-            <input class="input" id="cname" placeholder="Jane Doe"/>
+            <input class="input" id="cname" name="cname" placeholder="Jane Doe" required />
           </div>
           <div>
             <label class="muted" for="cemail">Email</label>
-            <input class="input" id="cemail" type="email" placeholder="jane@domain.com"/>
+            <input class="input" id="cemail" name="cemail" type="email" placeholder="jane@domain.com" required />
           </div>
           <div>
-            <label class="muted" for="cmsg">Message</label>
-            <textarea class="input" id="cmsg" rows="4" placeholder="How can we help?"></textarea>
+            <label class="muted" for="cmessage">Message</label>
+            <textarea class="input" id="cmessage" name="cmessage" rows="4" placeholder="How can we help?" required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send message</button>
         </form>
@@ -294,7 +292,7 @@
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
       <div style="display:flex; align-items:center; gap:10px">
         <a class="brand" href="#">
-          <img src="/static/Adsız tasarım (1).png" alt="HackMotherNature logo">
+          <img src="/Adsız tasarım (1).png" alt="HackMotherNature logo">
           <span class="brand-text"><span style="color:var(--maroon)">Hack</span><span style="color:var(--green)">MotherNature</span></span>
         </a>
       </div>
@@ -312,19 +310,20 @@
   </footer>
 
   <div class="toast" id="toast">Thanks! We got your submission.</div>
-  <button class="to-top" id="toTop" aria-label="Back to top" style="cursor:pointer; position:fixed; right:16px; bottom:16px; width:42px; height:42px; border-radius:999px; background:linear-gradient(180deg,var(--green2),var(--green)); color:#fff; border:none; box-shadow:var(--shadow); display:none; align-items:center; justify-content:center; font-size:1.2rem; z-index:1000;">↑</button>
-
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <script>
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Mobile menu (optional)
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileMenu');
     if (btn && mobile) btn.addEventListener('click', () => {
       mobile.style.display = mobile.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Event filter
     const grid = document.getElementById('eventGrid');
     document.querySelectorAll('[data-filter]').forEach(b=>{
       b.addEventListener('click',()=>{
@@ -338,11 +337,13 @@
       })
     });
 
+    // Reveal on scroll
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: .15 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+    // Active nav highlight
     const sections = ['about','chapters','events','challenge','schedule','faqs','contact'];
     const navLinks = [...document.querySelectorAll('nav a')];
     const spy = new IntersectionObserver(entries => {
@@ -355,6 +356,7 @@
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
     sections.forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
+    // Animated counters
     const counters = document.querySelectorAll('.num');
     const counterObs = new IntersectionObserver(es => {
       es.forEach(e => { if (!e.isIntersecting) return; animateCounter(e.target); counterObs.unobserve(e.target); });
@@ -366,9 +368,17 @@
       requestAnimationFrame(tick);
     }
 
-    function showToast(msg){ const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 2500); }
+    // Toast helper
+    function showToast(msg){
+      const t = document.getElementById('toast');
+      if (!t) return alert(msg);
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(()=>t.classList.remove('show'), 2500);
+    }
     function validEmail(v){ return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(v); }
 
+    // Register form (client-side only)
     document.getElementById('registerForm')?.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -379,14 +389,43 @@
       e.target.reset();
     });
 
-    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('cemail').value.trim();
-      if (!validEmail(email)) return showToast('Please use a valid email.');
-      showToast('Message sent. Thanks!');
-      e.target.reset();
-    });
+    // Contact form — EmailJS (single handler)
+    (function(){
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      const btn = form.querySelector('button[type="submit"]');
 
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name  = document.getElementById('cname').value.trim();
+        const email = document.getElementById('cemail').value.trim();
+        const msg   = document.getElementById('cmessage').value.trim();
+
+        if (!name)  return showToast('Please enter your name.');
+        if (!validEmail(email)) return showToast('Please use a valid email.');
+        if (!msg)   return showToast('Please write a short message.');
+
+        try {
+          if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+          await emailjs.send('aras_erdag', 'template_wki4csl', { 
+            cname: name,
+            cemail: email,
+            cmessage: msg
+          });
+
+          showToast('Message sent. Thanks!');
+          form.reset();
+        } catch (err) {
+          console.error(err);
+          showToast('Could not send right now. Please try again later.');
+        } finally {
+          if (btn) { btn.disabled = false; btn.textContent = 'Send message'; }
+        }
+      });
+    })();
+
+    // Back to top button
     const toTop = document.getElementById('toTop');
     window.addEventListener('scroll', () => {
       toTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
